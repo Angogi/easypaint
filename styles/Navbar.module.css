@@ -1,0 +1,69 @@
+.navbar{
+    background: linear-gradient(to right, #022028 , #08a3c9);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,.55);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    padding-right: 10px;
+}
+ 
+.logoName{
+    color: #f24007;
+    font-size: xxx-large;
+    font-weight: bolder;
+    margin-left: 20px;
+    margin-bottom: 0;
+    font-family: 'Satisfy', cursive;
+}
+
+.menuBars{
+    margin-left: 2rem;
+    font-size: 2rem;
+    background:none; 
+    color: wheat;
+}
+
+.navMenu{
+    background: linear-gradient(to right, #022028 , #08a3c9);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* justify-content: start; */
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+    z-index: 800;
+    text-align: center;
+    opacity: 0;
+}
+
+.active{
+    left: 0;
+    transition: 350ms;
+    opacity: 1;
+}
+
+.temporalyWarnigMessage{
+    display: block;
+    bottom: 0;  
+    right: 0;  
+
+}
+
+.temporalyWarnigMessage > h3{
+    color: #f24007;
+}
+
+@media only screen and (max-width: 360px){
+    .logoName{
+        font-size: xx-large;
+    }
+}

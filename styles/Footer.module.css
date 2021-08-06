@@ -1,0 +1,154 @@
+.footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #022028;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer__container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.footer__container > .sec{
+    margin-right: 30px;
+}
+
+.footer__container > .abouts{
+    width: 40%;
+}
+
+.footer__container > .sec > h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.footer__container > .sec > h2::before{
+   content: '';
+   border-radius: 50px;
+   position: absolute;
+   bottom: -5px;
+   left: 0;
+   width: 130px;
+   height: 5px;
+   background: linear-gradient(to right, #022028 , #08a3c9);
+}
+
+.footer__container > .sec > p{
+    color: #999;
+    font-size: large;
+}
+
+.sci{
+    margin-top: 20px;
+    display: flex;
+}
+
+.sci > li{
+    list-style: none;
+}
+
+.sci > li > a{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background: #f24007 ;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px; 
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.sci > li > a:hover{
+    background: linear-gradient(to right, #022028 , #08a3c9);
+}
+
+.icon{
+    color: #fff !important;
+    font-size: 30px ;
+    position: relative;
+}
+
+.contact{
+    width: calc(35% - 60px);
+    margin-right: 0 !important;
+    font-size: large;
+}
+
+.contact > .info{
+    position: relative;
+}
+
+.contact > .info > li{
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.contact > .info > li > span:nth-child(1){
+    color: #f24007 ;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.contact > .info > li > span{
+    color: #999;
+    margin-left: 0;
+}
+
+
+.contact > .info > li > p > a{
+    color: #999 !important;
+    text-decoration: none;
+}
+.contact > .info > li > p > a:hover{
+    color: #fff;
+    
+}
+
+.copyRightText{
+    width: 100%;
+    text-align: center;
+    padding: 8px 100px;
+    color: #999;
+    font-size: large;
+}
+
+@media(max-width: 991px){
+    .footer{
+        padding: 40px;
+    }
+
+    .footer__container{
+        flex-direction: column;
+    }
+
+    .footer__container > .sec{
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .footer__container > .abouts{
+        width: 100%;
+    }
+
+    .quickLinks{
+        
+         width: 100%;
+     }
+
+     .contact{
+         width: 100%;
+     }
+
+     .copyRightText{
+         padding: 8px 40px;
+     }
+}

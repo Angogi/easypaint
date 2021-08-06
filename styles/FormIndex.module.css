@@ -1,0 +1,276 @@
+.budgetForm{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,.55); 
+    color: black;
+    height: 95vh;
+    padding: 10px;
+    width: 70vw;
+   
+}
+
+.title{
+    width: 100%;
+    background: linear-gradient(to right, #b22702 , #f24007);
+    border-radius: 5px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 2em;
+}
+
+.subTitle{
+    font-size: 1em;
+    font-weight: bolder;
+    margin-bottom: 7px;
+}
+
+.bugetForm__controlButtons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    height: 10vh;
+    width: 100%;
+}
+.bugetForm__controlButtons > button{
+    background: linear-gradient(to right, #bb2222, #f24007);
+    box-shadow: 2px 2px 4px rgba(0,0,0,.55);
+    font-size: 1.5em;
+    font-weight: bolder;
+    height: 55%;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 2s;
+    width: 35%;
+}
+
+.bugetForm__controlButtons > .backButton{
+    background: none;
+    
+}
+
+
+.form__Budget{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+}
+
+.form__BigBox{
+  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    position: relative;
+    left: -105%;
+    transition: 500ms;
+    opacity: 0;
+    margin-top: 5px;
+}
+
+.activeType{
+    left: 0;
+    opacity: 1;
+    transition: 300ms;
+
+}
+
+.form__BigBox__OptionContainer{
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    overflow: scroll;
+    width: 48%;  
+}
+.form__BigBox__SuccesContainer{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
+    overflow: scroll;
+    width: 100%;  
+     
+}
+
+.form__BigBox__SuccesContainer > progress{
+    width: 90%;
+}
+
+ .formJobType__option{
+    padding-left: 10px;
+    font-size: 1.5em;   
+    font-weight: 900;  
+    font-family: 'New Tegomin', serif !important;
+}
+
+
+.contactContainer{
+    height: 67vh !important;
+    padding: 10px;
+    justify-content: center !important;
+}
+
+
+.form__BigBox__OptionContainer> .MuiTextField-root{
+  margin-top: 20px !important;
+  font-size: 10em !important;
+      
+}
+.imagesUploader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    right: inherit;
+    cursor: pointer;
+   
+}
+
+.imagesUploader > h2{
+    font-weight: bolder;
+
+}
+
+.secundaryImageUploader{
+    font-size: 80px;
+    font-weight: bolder;
+    text-align: center;
+    height: 150px;
+    width: 49%;
+    background-color: #80808080;
+    border-radius: 7px;
+}
+
+.form__BigBox__OptionContainer > .uploadedImages{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; 
+    margin-top: 20px;
+}
+
+.uploadedImage{
+    width: 48%;
+    height: 150px;
+    object-fit: cover;
+    margin: 2px;
+    border-radius: 7px;
+}
+
+.formJobType__option {
+    background:  #02202829;
+    margin-top: 2px;
+    border-radius: 5px;
+    margin-left: 0px !important;
+    width: 100%;
+    border: none;
+    text-align: left;
+}
+
+.formJobType__optionSpan{
+    font-size: 1rem;
+    font-weight: bolder;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.form__BigBox__ImagenContainer{
+    
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 48%;
+    padding-left: 20px;
+    
+}
+.image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    position: relative;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.textarea{
+   
+    height: 50%;
+    padding-left: 20px;
+    border: 0.5px solid #f24007;
+    border-radius: 5px;
+    font-size: 1.5em;
+    padding: 5px 5px 5px 10px;
+    font-family: 'New Tegomin', serif !important;
+
+}
+
+.noOverFlow{
+    overflow: unset !important;
+}
+
+
+
+@media (max-width: 769px){
+    .form__BigBox__OptionContainer{
+        justify-content: start;
+        width: 100%;
+        height: 33.75vh;
+        margin-top: 20px;
+       
+    }
+   
+    .form__BigBox__ImagenContainer{
+        justify-content: center;
+        padding: 0;
+        height: 33.75vh;
+        width: 100%;
+    }
+
+    .form__BigBox__ImagenContainer > textarea {
+        height: 90%;
+    }
+
+    .budgetForm{
+        width: 98vw;
+       
+    }
+
+    .title{
+        font-size: 1.7em;
+        height: 12.25vh;
+    }
+    
+    .bugetForm__controlButtons{
+        height: 10.25vh;
+    }
+    .bugetForm__controlButtons > button{
+        font-size: 1em;
+    }
+    .subTitle{
+        font-size: 0.7em;
+        
+    }
+ 
+}
+
+@media only screen and (max-width: 360px){
+    .title{
+        font-size: 1.2em;
+    }
+}
