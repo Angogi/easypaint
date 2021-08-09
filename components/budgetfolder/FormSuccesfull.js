@@ -8,9 +8,8 @@ function FormSuccessfull({state, handleChange, closer, progress}) {
             let element = document.getElementById('formStep5');
             element.classList.add(styles.activeType)
         }
-
-      
     }, [state.step])
+    
     return (
         <div className={styles.form__Budget}>
             <h1 className={styles.title}>Enviando formulario</h1>

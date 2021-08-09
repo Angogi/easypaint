@@ -13,7 +13,7 @@ function FormCommentsAndPictures({state, handleChange, nextStep, prevStep, Borde
     }, [state.step])
 
     const renderPhotos = (source)=>{
-        // console.log(selectedImages)
+
         return source.map((photo)=>{
             return (
                 <img width={500} height={333} alt="images list" className={styles.uploadedImage}  key={photo} src={photo}/>

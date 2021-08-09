@@ -85,8 +85,7 @@ export const BudgetForm = ({onClose}) => {
           ...state,
           [event.target.name]: value
         });
-        console.log(event.target.name)
-        console.log(value);
+
       };
       
     const prevStep = (e)=>{
@@ -95,7 +94,6 @@ export const BudgetForm = ({onClose}) => {
             ...state,
             step: state.step  - 1,
         })
-        console.log(state)
     };
 
     const nextStep = (e)=>{
@@ -104,7 +102,6 @@ export const BudgetForm = ({onClose}) => {
             ...state,
             step: state.step + 1,
         })
-        console.log(state)
     };
 
     const backToRadioSelect = (event)=>{
@@ -130,7 +127,6 @@ export const BudgetForm = ({onClose}) => {
     const [progress, setProgress] = useState(0);
 
     const imageHandleChange = (e) =>{
-        console.log(e.target.files)
         if(e.target.files){
             const fileArray = Array.from(e.target.files).map((file)=> URL.createObjectURL(file));
             setSelectedImages((prevImages)=>prevImages.concat(fileArray));
@@ -139,7 +135,6 @@ export const BudgetForm = ({onClose}) => {
                 (file)=>URL.revokeObjectURL(file)
             )
 
-            console.log(fileArray)
 
         }
 
@@ -186,7 +181,6 @@ export const BudgetForm = ({onClose}) => {
             .catch((err) => console.log(err));
 
     }
-    console.log(urls);
     
     const [errors, setErrors] = useState({
         Nombre : 'Por favor, ingrese su nombre'

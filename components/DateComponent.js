@@ -4,10 +4,8 @@ import {AiOutlineArrowLeft, AiOutlineArrowRight} from 'react-icons/ai'
 
 const DateComponent = () => {
   const date = new Date();
-
+ 
   date.setDate(1);
-
-    console.log(date.getDate())
 
     const lastDay = new Date(
       date.getFullYear(),
@@ -21,9 +19,7 @@ const DateComponent = () => {
       0
     ).getDate();
 
-    console.log(lastDay)
-    console.log(prevLastDay)
-    
+     
     const firstDayIndex = date.getDate()
     const months = [
     'enero',
@@ -49,9 +45,8 @@ const DateComponent = () => {
       days.push(<div>{i}</div>)
     }
 
+  const month = months[date.getMonth()] ;
 
- 
-  
   return (
     <div className={styles.dateContainer}>
       <div className={styles.calendar}>
@@ -61,8 +56,8 @@ const DateComponent = () => {
           <div className={styles.prev}><AiOutlineArrowLeft/></div>
 
           <div className={styles.date}>
-            <h1>Mayo</h1>
-            <p>Fri May 29, 2021</p>
+            <h1>{month}</h1>
+            <p></p>
           </div>
 
           <div className={styles.next}><AiOutlineArrowRight/></div>
