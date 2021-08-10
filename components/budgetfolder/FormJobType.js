@@ -202,7 +202,8 @@ const FormJobType = ({nextStep, handleChange, state, backToRadioSelect, BorderLi
                             value="Otro"
                             name="RadioOptionFormJobType"
                             control={<GreenRadio/>} 
-                            label="Otro"
+                            label={state.RadioOptionFormJobType === "Otro" ? "¿Cual otro 👇🏽" : "¿Cual otro"}
+
                         />
 
                         {state.RadioOptionFormJobType === "Otro" ?

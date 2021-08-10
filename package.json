@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "NODE_OPTIONS=--max_old_space_size=8192 next",
+    "start": "NODE_OPTIONS=--max_old_space_size=1024 next",
     "export": "next export",
     "lint": "next lint"
   },

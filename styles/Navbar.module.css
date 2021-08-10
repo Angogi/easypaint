@@ -26,7 +26,18 @@
     margin-left: 2rem;
     font-size: 2rem;
     background:none; 
-    color: wheat;
+    color: #fff;
+}
+
+.menuBars::before{
+    content: '';
+    background-color: #f24007;
+    position: absolute;
+    bottom: 35%;
+    left: 11%;
+    height: 16px;
+    width: 17px;
+    z-index: -1;
 }
 
 .navMenu{

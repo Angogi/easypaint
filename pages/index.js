@@ -8,6 +8,7 @@ import Modal from '../components/Modal';
 import BudgetForm from '../components/budgetfolder/BudgetForm';
 import { DataCards } from '../components/cards/DataCard';
 import Cards from '../components/cards/Card';
+// import StepsComponet from'../components/StepsComponent';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -67,6 +68,8 @@ export default function Home() {
               />
             )
         })}
+
+        {/* <StepsComponet /> */}
       </section>
 
       <Footer />
