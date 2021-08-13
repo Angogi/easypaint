@@ -3,7 +3,7 @@ import styles from '../../styles/FormIndex.module.css';
 import Image from 'next/image'
 import Select from '@material-ui/core/Select';
 import ZipZoneImage from '../../public/images/location.jpg';
-import {Elements} from '../../pages/api/MunicipiosBarcelona';
+import {Elements} from '../../pages/api/MunicipiosBarcelona'; 
 
 
 function FormZipZone({prevStep, nextStep, handleChange, state, BorderLinearProgress}) {

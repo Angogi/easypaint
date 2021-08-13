@@ -29,16 +29,6 @@
     color: #fff;
 }
 
-.menuBars::before{
-    content: '';
-    background-color: #f24007;
-    position: absolute;
-    bottom: 35%;
-    left: 11%;
-    height: 16px;
-    width: 17px;
-    z-index: -1;
-}
 
 .navMenu{
     background: linear-gradient(to right, #022028 , #08a3c9);

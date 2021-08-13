@@ -34,7 +34,7 @@ const GreenCheckbox = withStyles({
   })((props) => <Radio color="default" {...props} />);
 
  
-const FormJobType = ({nextStep, handleChange, state, backToRadioSelect, BorderLinearProgress, closer}) => {
+const FormJobType = ({nextStep, handleChange, state,  BorderLinearProgress, closer}) => {
 
     useEffect(() => {
         if(state.step === 1){
@@ -49,10 +49,34 @@ const FormJobType = ({nextStep, handleChange, state, backToRadioSelect, BorderLi
             <div className={styles.form__BigBox} id="formStep0">
                 <div className={styles.form__BigBox__OptionContainer} id="optionContainer">
 
-                    {state.RadioOptionFormJobType === "VariosTrabajos" ? 
-                    
                     <FormGroup aria-label="formJobType" name="formJobType" id="multipleOptionContainer">
-                        <strong><h2 className={styles.subTitle}>Ahora puedes elegir varios tipos de trabajos<span arial-label="happy-emoji" role="img">😊</span></h2></strong>
+                        <FormControlLabel
+                            control={<GreenCheckbox 
+                            checked={state.PintarPiso} 
+                            onChange={handleChange} 
+                            name="PintarPiso" />}
+                            label="Pintar Piso"
+                            className={styles.formJobType__option}
+
+                        />
+                        <FormControlLabel
+                            control={<GreenCheckbox 
+                            checked={state.PintarInteriorChalet} 
+                            onChange={handleChange} 
+                            name="PintarInteriorChalet" />}
+                            label="Pintar Interior Chalet"
+                            className={styles.formJobType__option}
+
+                        />
+                        <FormControlLabel
+                            control={<GreenCheckbox 
+                            checked={state.PintarExteriorChalet} 
+                            onChange={handleChange} 
+                            name="PintarExteriorChalet" />}
+                            label="Pintar Exterior Chalet"
+                            className={styles.formJobType__option}
+
+                        />
                         <FormControlLabel
                             control={<GreenCheckbox 
                             checked={state.PintarInteriorFinca} 
@@ -68,24 +92,6 @@ const FormJobType = ({nextStep, handleChange, state, backToRadioSelect, BorderLi
                             onChange={handleChange} 
                             name="PintarExterorFinca" />}
                             label="Pintar Exterior Finca"
-                            className={styles.formJobType__option}
-
-                        />
-                        <FormControlLabel
-                            control={<GreenCheckbox 
-                            checked={state.PintarInteriorVivienda} 
-                            onChange={handleChange} 
-                            name="PintarInteriorVivienda" />}
-                            label="Pintar Interior Vivienda"
-                            className={styles.formJobType__option}
-
-                        />
-                        <FormControlLabel
-                            control={<GreenCheckbox 
-                            checked={state.PintarExteriorVivienda} 
-                            onChange={handleChange} 
-                            name="PintarExteriorVivienda" />}
-                            label="Pintar Exterior Vivienda"
                             className={styles.formJobType__option}
 
                         />
@@ -115,7 +121,7 @@ const FormJobType = ({nextStep, handleChange, state, backToRadioSelect, BorderLi
                                 onChange={handleChange} 
                                 name="OtroTrabajo"/>}
 
-                            label="Otro"
+                            label={state.OtroTrabajo === true ? "Otro 👇🏽" : "Otro"}
                             className={styles.formJobType__option}
 
                         />
@@ -139,96 +145,7 @@ const FormJobType = ({nextStep, handleChange, state, backToRadioSelect, BorderLi
                         
                         } 
 
-                        <label onClick={backToRadioSelect} className={styles.formJobType__option, styles.formJobType__optionSpan}>
-                            <span aria-label="Emoji hand back" role="img">👈🏽</span>
-                            <span>Elegir un solo trabajo</span>
-                        </label>
                     </FormGroup>
-
-                    : 
-
-                    <RadioGroup aria-label="formJobType" name="formJobType" value={state.RadioOptionFormJobType} onChange={handleChange}>
-                         <FormControlLabel
-                            className={styles.formJobType__option}
-                            value="VariosTrabajos"
-                            name="RadioOptionFormJobType"
-                            control={<GreenRadio/>} 
-                            label="Elegir Varios Trabajos"
-                        />
-                        <FormControlLabel
-                            className={styles.formJobType__option}
-                            value="PintarInteriorFinca"
-                            name="RadioOptionFormJobType"
-                            control={<GreenRadio/>} 
-                            label="Pintar Interior Finca"
-                        />
-                        <FormControlLabel
-                            className={styles.formJobType__option}
-                            value="PintarExteriorFinca"
-                            name="RadioOptionFormJobType"
-                            control={<GreenRadio/>} 
-                            label="Pintar Exterior Finca"
-                        />
-                        <FormControlLabel
-                            className={styles.formJobType__option}
-                            value="PintarInteriorVivienda"
-                            name="RadioOptionFormJobType"
-                            control={<GreenRadio/>} 
-                            label="Pintar Interior Vivienda"
-                        />
-                        <FormControlLabel
-                            className={styles.formJobType__option}
-                            value="PintarExteriorVivienda"
-                            name="RadioOptionFormJobType"
-                            control={<GreenRadio/>} 
-                            label="Pintar Exterior Vivienda"
-                        />
-                        <FormControlLabel
-                            className={styles.formJobType__option}
-                            value="PintarInteriorLocal"
-                            name="RadioOptionFormJobType"
-                            control={<GreenRadio/>} 
-                            label="Pintar Interior Local Comercial"
-                        />
-                        <FormControlLabel
-                            className={styles.formJobType__option}
-                            value="PintarExteriorLocal"
-                            name="RadioOptionFormJobType"
-                            control={<GreenRadio/>} 
-                            label="Pintar Exterior Local Comercial"
-                        />
-                        <FormControlLabel
-                            className={styles.formJobType__option}
-                            value="Otro"
-                            name="RadioOptionFormJobType"
-                            control={<GreenRadio/>} 
-                            label={state.RadioOptionFormJobType === "Otro" ? "¿Cual otro 👇🏽" : "¿Cual otro"}
-
-                        />
-
-                        {state.RadioOptionFormJobType === "Otro" ?
-
-                            <TextField
-                            
-                                className={styles.formJobType__option}
-                                onChange={handleChange} 
-                                value={state.ElOtroTrabajo}
-                                name="ElOtroTrabajo"
-                                label="¿Cual otro?"
-                                variant="outlined"
-                                id="mui-theme-provider-outlined-input"
-                            />
- 
-                        : 
-
-                         null 
-                        
-                         } 
-
-                       
-                    </RadioGroup>
-                    
-                    } 
             
                 </div>
 

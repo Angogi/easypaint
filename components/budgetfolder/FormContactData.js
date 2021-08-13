@@ -70,7 +70,7 @@ function FormContactData({state, handleChange, prevStep, BorderLinearProgress, e
                             onChange={handleChange}
                             name='Numero'
                             value={state.Numero}
-                            placeholder='+34'
+                            placeholder='+33'
                             helperText={errors.Numero}
 
                         />

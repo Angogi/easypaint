@@ -33,34 +33,31 @@ export const BudgetForm = ({onClose}) => {
    
     const [state, setState] = useState({
         step: 1,
-
-        RadioOptionFormJobType:'PintarInteriorFinca',  
-
+      
+        PintarPiso:false,
+        PintarInteriorChalet:false,
+        PintarExteriorChalet:false,
         PintarInteriorFinca:false,
         PintarExterorFinca:false,
-        PintarInteriorVivienda:false,
-        PintarExteriorVivienda:false,
         PintarInteriorLocalComercial:false,
         PintarExteriorLocalComercial:false,
-        VariosTrabajos:false,
         OtroTrabajo:false,
         ElOtroTrabajo:'',
-        ElOtroTrabajoCheckOption:'',
-
-        PintarParedesEscalera:false,
-        PintarTechosEscalera:false,
-        PonerGotele:false,
-        QuitarGotele:false,
-        PonerPapelDecorativo:false,
-        QuitarPapelDecorativo:false,
-        PintarPuertasAscensor:false,
+    
+        PintarPuertaPortal:false,
+        PintarPuertaPrincipal:false,
+        PintarPuertasInteriores: false,
+        PintarArmariosEmpotrados:false ,
         TratarHumedades:false,
         RepararParedes:false,
-        PintarPuertaPortal:false,
+        QuitarGoteleYAlisar:false,
+        PintarParedesEscalera:false,
+        PintarTechosEscalera:false,
         PintarCarpinteriaEscalera:false,
-        
-        PintarFachada:false,
-        PintarCarpinteriaExterior:false,
+        PintarPuertasAscensor:false,
+        PonerPapelDecorativo:false,
+        QuitarPapelDecorativo:false,
+
         NumeroPlantasEdificio:0,
 
         Localidad: '',
@@ -104,22 +101,6 @@ export const BudgetForm = ({onClose}) => {
         })
     };
 
-    const backToRadioSelect = (event)=>{
-        event.preventDefault();
-        setState({
-            ...state,
-            RadioOptionFormJobType: "PintarInteriorFinca",
-            PintarInteriorFinca:false,
-            PintarExterorFinca:false,
-            PintarInteriorVivienda:false,
-            PintarExteriorVivienda:false,
-            PintarInteriorLocalComercial:false,
-            PintarExteriorLocalComercial:false,
-            VariosTrabajos:false,
-            OtroTrabajo:false,
-            ElOtroTrabajoCheckOption:'',
-        })
-    }
 
     const [selectedImages, setSelectedImages] = useState([]);
     const [images, setImages] = useState([]);
@@ -229,7 +210,6 @@ export const BudgetForm = ({onClose}) => {
                     nextStep={nextStep}
                     handleChange={handleChange}
                     state={state}
-                    backToRadioSelect={backToRadioSelect}
                     BorderLinearProgress={BorderLinearProgress}
                     closer={closer}
                 />
@@ -328,3 +308,4 @@ export const BudgetForm = ({onClose}) => {
 
 export default BudgetForm
 
+// "start": "NODE_OPTIONS=--max_old_space_size=2048 next",
