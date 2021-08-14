@@ -34,7 +34,7 @@ function FormJobServices({state, handleChange, prevStep, nextStep, BorderLinearP
                 checked={servicesInputs[service]} 
                 onChange={handleChange} 
                 name={service} />}
-                label={service}
+                label={service.split(/(?=[A-Z])/).join(" ")}
                 className={styles.formJobType__option}
                 />
             )
