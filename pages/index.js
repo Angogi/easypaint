@@ -28,7 +28,7 @@ export default function Home() {
         <title>Easy Paint</title>
         <meta name="description" content="Pintores profesionales en Barcelona y Tarragona"/>
         <link rel="icon" href='cepillo-de-pintura-en-rollo.png'/>
-         {/* Global site tag (gtag.js) - Google Analytics  */}
+        <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-202506187-1">
         </script>
         <script>
