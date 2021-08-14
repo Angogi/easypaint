@@ -90,7 +90,7 @@ const FormJobType = ({nextStep, handleChange, state,  BorderLinearProgress, clos
                             control={<GreenCheckbox 
                             checked={state.PintarExteriorFinca} 
                             onChange={handleChange} 
-                            name="PintarExterorFinca" />}
+                            name="PintarExteriorFinca" />}
                             label="Pintar Exterior Finca"
                             className={styles.formJobType__option}
 
