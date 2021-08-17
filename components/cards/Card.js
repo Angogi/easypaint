@@ -6,9 +6,7 @@ import {useInView} from 'react-intersection-observer';
 
 export default function Card(props) {
 
-    const {ref, inView} = useInView({
-        threshold: 0.2
-    });
+    const {ref, inView} = useInView();
     const animation = useAnimation();
 
     useEffect(()=>{
