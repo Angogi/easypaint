@@ -11,7 +11,7 @@
 }
 
 .cardS3:hover{
-    background-color: #d89a10;
+    background: linear-gradient(to right, #d89a10 , #f7cc50);
 }
 
 .textCardS3{
