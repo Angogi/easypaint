@@ -104,7 +104,8 @@ export default function Home() {
               </div>
           </motion.div>
       </section> 
-      <section className={styles.sectionTwo} ref={ref}>
+                 
+      <section className={styles.sectionTwo} ref={ref}  >
         {DataCards.map((item, index)=>{
             return(
               <Cards 
