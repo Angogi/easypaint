@@ -14,11 +14,13 @@
     "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.60",
     "firebase": "^8.8.0",
+    "framer-motion": "^4.1.17",
     "next": "11.0.1",
     "react": "17.0.2",
     "react-datepicker": "^4.1.1",
     "react-dom": "17.0.2",
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.2.0",
+    "react-intersection-observer": "^8.32.0"
   },
   "devDependencies": {
     "eslint": "7.31.0",

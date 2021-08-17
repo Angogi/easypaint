@@ -10,6 +10,7 @@ import { DataCards } from '../components/cards/DataCard';
 import Cards from '../components/cards/Card';
 import SectionThree from '../components/SectionThreeHome';
 import Footer from '../components/Footer';
+import {motion} from 'framer-motion';
 
 export default function Home() {
 
@@ -35,7 +36,19 @@ export default function Home() {
 
      <section className={styles.sectionOne}>
           <VideoS1 />
-          <div className={styles.sectionOne__container}>
+          <motion.div className={styles.sectionOne__container} initial='hidden' animate='visible' variants={{
+            hidden:{
+              scale: .8,
+              opacity: 0
+            },
+            visible: {
+              scale: 1,
+              opacity: 1,
+              transition: {
+                delay: .4
+              }
+            }
+          }}>
               <div className={styles.sectionBox} >
                   <h1 id="text__s1">
                       ¡Easy Paint!
@@ -47,14 +60,17 @@ export default function Home() {
                   </h1>
               </div>
               <div className={styles.sectionBox} >
-                  <button onClick={handleOpen} className={styles.button__s1}>
+                  <motion.button onClick={handleOpen} className={styles.button__s1}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
                       Solicitar presupuesto
-                  </button>
+                  </motion.button>
                   <Modal show={showModal} onClose={handleClose}>
                     <BudgetForm onClose={handleClose}/>
                   </Modal>
               </div>
-          </div>
+          </motion.div>
       </section> 
       <section className={styles.sectionTwo}>
         {DataCards.map((item, index)=>{
