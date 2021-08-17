@@ -1,8 +1,3 @@
-// import image1 from '../../public/images/painter-chooses-color-from-samples.jpg';
-// import image2 from '../../public/images/happy-young-woman-designer-planning-renovation-of-modern-apartment.jpg';
-// import image3 from '../../public/images/afro-american-woman-holds-color-samples-for-new-apartment.jpg';
-
-
 export  const DataCards = [
     {
         image: '/images/painter-chooses-color-from-samples.jpg',

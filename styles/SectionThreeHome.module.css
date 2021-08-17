@@ -1,0 +1,39 @@
+.sectionThree{
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.sectionThreeText{
+    padding: 10px;
+    width: 500px;
+}
+
+.sectionThreeText > h2{
+    margin-bottom: 5px;
+    position: relative;
+}
+.sectionThreeText > h2::before{
+    content: '';
+    border-radius: 50px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 180px;
+    height: 5px;
+    background: -webkit-gradient(linear, left top, right top, from(#022028) , to(#08a3c9));
+}
+
+.sectionThreeImages{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
