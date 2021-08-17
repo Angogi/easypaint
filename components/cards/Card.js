@@ -1,12 +1,15 @@
 import styles from '../../styles/Card.module.css';
 import Image from 'next/image';
 import { useEffect } from 'react';
-import {motion, useAnimation} from 'framer-motion';
-import {useInView} from 'react-intersection-observer';
+import {motion} from 'framer-motion';
+import {useAnimation} from 'framer-motion';
+import {useInView} from 'react-intersection-observer'; 
 
 export default function Card(props) {
 
-    const {ref, inView} = useInView();
+    const {ref, inView} = useInView({
+        threshold: 0.2
+    });
     const animation = useAnimation();
 
     useEffect(()=>{
@@ -23,6 +26,8 @@ export default function Card(props) {
                 x: '-100vw'
             })
         }
+
+        console.log(inView)
        
     }, [inView])
 
