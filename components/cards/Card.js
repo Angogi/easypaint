@@ -14,7 +14,7 @@ export default function Card(props) {
             animation.start({
                 x:0,
                 transition:{
-                    type:'spring', duration: 1, bounce: 0
+                    type:'spring', duration: 1, bounce: 0.3
                 }
             })
         }
@@ -31,7 +31,6 @@ export default function Card(props) {
             className={styles.card} 
             ref={ref}
             animate={animation}
-           
         >
             <Image className={styles.img} width={500} height={333} alt={props.imageTitle} src={props.image} />
             <div className={styles.cardContent}>
