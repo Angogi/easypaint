@@ -4,8 +4,6 @@ import {motion} from 'framer-motion';
 
 export default function Card(props) {
 
-  
-
     return (
         <motion.div 
             className={styles.card} 
