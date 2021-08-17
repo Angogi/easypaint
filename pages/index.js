@@ -48,7 +48,7 @@ export default function Home() {
               </div>
               <div className={styles.sectionBox} >
                   <button onClick={handleOpen} className={styles.button__s1}>
-                      Estimar presupuesto
+                      Solicitar presupuesto
                   </button>
                   <Modal show={showModal} onClose={handleClose}>
                     <BudgetForm onClose={handleClose}/>
