@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Navbar from '../components/Navbar';
@@ -12,6 +12,9 @@ import SectionThree from '../components/SectionThreeHome';
 import Footer from '../components/Footer';
 import {motion} from 'framer-motion';
 
+import {useAnimation} from 'framer-motion';
+import {useInView} from 'react-intersection-observer'; 
+
 export default function Home() {
 
   const [showModal, setShowModal] = useState(false);
@@ -22,6 +25,35 @@ export default function Home() {
   const handleClose = () => {
     setShowModal(false);
   };
+
+
+
+
+  const {ref, inView} = useInView({
+        threshold: 0.2
+    });
+    const animation = useAnimation();
+
+    useEffect(()=>{
+        if(inView){
+            animation.start({
+                x:0,
+                transition:{
+                    type:'spring', duration: 1, bounce: 0.3
+                }
+            })
+        }
+        if(!inView){
+            animation.start({
+                x: '-100vw'
+            })
+        }
+
+        console.log(inView)
+      
+    }, [inView])
+
+
 
    return (
     <div className={styles.home}>
@@ -72,7 +104,7 @@ export default function Home() {
               </div>
           </motion.div>
       </section> 
-      <section className={styles.sectionTwo}>
+      <section className={styles.sectionTwo} ref={ref}>
         {DataCards.map((item, index)=>{
             return(
               <Cards 
@@ -81,6 +113,7 @@ export default function Home() {
                   imageTitlle={item.imageTitle} 
                   title={item.title} 
                   text={item.text}
+                  animate={animation}
               />
             )
         })}
