@@ -9,7 +9,11 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
+<<<<<<< HEAD
         <Head/>
+=======
+        <Head />
+>>>>>>> develop
         <body>
           <Main />
           <NextScript />

@@ -8,7 +8,7 @@ import Modal from '../components/Modal';
 import BudgetForm from '../components/budgetfolder/BudgetForm';
 import { DataCards } from '../components/cards/DataCard';
 import Cards from '../components/cards/Card';
-// import StepsComponet from'../components/StepsComponent';
+import SectionThree from '../components/SectionThreeHome';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -28,7 +28,6 @@ export default function Home() {
         <title>Easy Paint</title>
         <meta name="description" content="Pintores profesionales en Barcelona y Tarragona"/>
         <link rel="icon" href='cepillo-de-pintura-en-rollo.png'/>
-        
       </Head>
 
      <Navbar/>
@@ -70,9 +69,10 @@ export default function Home() {
             )
         })}
 
-        {/* <StepsComponet /> */}
       </section>
 
+      <SectionThree />
+      
       <Footer />
 
     </div>
