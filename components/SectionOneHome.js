@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from '../styles/Home.module.css';
 import VideoS1 from './VideoS1';
-import Modal from '../Modal';
+import Modal from './Modal';
 import BudgetForm from './budgetfolder/BudgetForm';
 import {motion} from 'framer-motion';
 
