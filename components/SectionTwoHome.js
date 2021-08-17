@@ -4,6 +4,8 @@ import {useAnimation} from 'framer-motion';
 import {useInView} from 'react-intersection-observer'; 
 import Cards from '../components/cards/Card';
 import { DataCards } from './cards/DataCard';
+import {motion} from 'framer-motion';
+
 
 
 function SectionTwoHome() {
@@ -33,7 +35,7 @@ function SectionTwoHome() {
 
 
     return (
-        <section className={styles.sectionTwo} ref={ref}  >
+        <motion.section className={styles.sectionTwo} ref={ref}  animate={animation}>
         {DataCards.map((item, index)=>{
             return(
             <Cards 
@@ -42,12 +44,11 @@ function SectionTwoHome() {
                 imageTitlle={item.imageTitle} 
                 title={item.title} 
                 text={item.text}
-                animate={animation}
             />
             )
         })}
 
-        </section>
+        </motion.section>
     )
 }
 
